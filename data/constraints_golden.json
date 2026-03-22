@@ -1,0 +1,2402 @@
+[
+  {
+    "category": "order_compliance",
+    "rules": [
+      "Rule-A: Orders from unverified customers (customer_verified=false) with order_value > 300 must have manual_review=true.",
+      "Rule-B: Express shipping (shipping_type=express) is prohibited when the order has fragile items (has_fragile=true) AND the destination is international (is_international=true).",
+      "Rule-C: A discount code (discount_applied=true) cannot be used on orders that already have a promotional price (has_promo_price=true).",
+      "Rule-D: Gift wrapping (gift_wrap=true) is not available for orders with order_value < 50 OR for digital-only orders (is_digital=true)."
+    ],
+    "data_csv": "order_id,customer_verified,order_value,shipping_type,has_fragile,is_international,has_promo_price,discount_applied,gift_wrap,is_digital,manual_review\nORD-001,false,400,standard,false,false,false,false,false,false,false\nORD-002,true,200.0,standard,false,false,false,false,false,false,false\nORD-003,true,200.0,express,true,true,false,false,false,false,false\nORD-004,true,200.0,standard,false,false,false,false,false,false,false\nORD-005,true,200.0,standard,false,false,true,true,false,false,false\nORD-006,true,200.0,standard,false,false,false,false,false,false,false\nORD-007,true,35.0,standard,false,false,false,false,true,false,false\nORD-008,true,200.0,standard,false,false,false,false,false,false,false\nORD-009,true,150.0,standard,false,false,false,false,true,true,false\nORD-010,true,200.0,standard,false,false,false,false,false,false,false\nORD-011,true,200.0,express,true,false,false,false,false,false,false\nORD-012,true,200.0,express,false,true,false,false,false,false,false\nORD-013,false,300.0,standard,false,false,false,false,false,false,false\nORD-014,true,75.0,standard,false,false,false,false,true,false,false\nORD-015,true,200.0,standard,false,false,false,false,false,false,false",
+    "gold_violations": [
+      {
+        "row_id": "ORD-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ORD-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ORD-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 0
+  },
+  {
+    "category": "order_compliance",
+    "rules": [
+      "Rule-A: Orders from unverified customers (customer_verified=false) with order_value > 400 must have manual_review=true.",
+      "Rule-B: Express shipping (shipping_type=express) is prohibited when the order has fragile items (has_fragile=true) AND the destination is international (is_international=true).",
+      "Rule-C: A discount code (discount_applied=true) cannot be used on orders that already have a promotional price (has_promo_price=true).",
+      "Rule-D: Gift wrapping (gift_wrap=true) is not available for orders with order_value < 50 OR for digital-only orders (is_digital=true)."
+    ],
+    "data_csv": "order_id,customer_verified,order_value,shipping_type,has_fragile,is_international,has_promo_price,discount_applied,gift_wrap,is_digital,manual_review\nORD-001,false,500,standard,false,false,false,false,false,false,false\nORD-002,true,200.0,standard,false,false,false,false,false,false,false\nORD-003,true,200.0,express,true,true,false,false,false,false,false\nORD-004,true,200.0,standard,false,false,false,false,false,false,false\nORD-005,true,200.0,standard,false,false,true,true,false,false,false\nORD-006,true,200.0,standard,false,false,false,false,false,false,false\nORD-007,true,35.0,standard,false,false,false,false,true,false,false\nORD-008,true,200.0,standard,false,false,false,false,false,false,false\nORD-009,true,150.0,standard,false,false,false,false,true,true,false\nORD-010,true,200.0,standard,false,false,false,false,false,false,false\nORD-011,true,200.0,express,true,false,false,false,false,false,false\nORD-012,true,200.0,express,false,true,false,false,false,false,false\nORD-013,false,400.0,standard,false,false,false,false,false,false,false\nORD-014,true,75.0,standard,false,false,false,false,true,false,false\nORD-015,true,200.0,standard,false,false,false,false,false,false,false",
+    "gold_violations": [
+      {
+        "row_id": "ORD-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ORD-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ORD-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 1
+  },
+  {
+    "category": "order_compliance",
+    "rules": [
+      "Rule-A: Orders from unverified customers (customer_verified=false) with order_value > 500 must have manual_review=true.",
+      "Rule-B: Express shipping (shipping_type=express) is prohibited when the order has fragile items (has_fragile=true) AND the destination is international (is_international=true).",
+      "Rule-C: A discount code (discount_applied=true) cannot be used on orders that already have a promotional price (has_promo_price=true).",
+      "Rule-D: Gift wrapping (gift_wrap=true) is not available for orders with order_value < 50 OR for digital-only orders (is_digital=true)."
+    ],
+    "data_csv": "order_id,customer_verified,order_value,shipping_type,has_fragile,is_international,has_promo_price,discount_applied,gift_wrap,is_digital,manual_review\nORD-001,false,600,standard,false,false,false,false,false,false,false\nORD-002,true,200.0,standard,false,false,false,false,false,false,false\nORD-003,true,200.0,express,true,true,false,false,false,false,false\nORD-004,true,200.0,standard,false,false,false,false,false,false,false\nORD-005,true,200.0,standard,false,false,true,true,false,false,false\nORD-006,true,200.0,standard,false,false,false,false,false,false,false\nORD-007,true,35.0,standard,false,false,false,false,true,false,false\nORD-008,true,200.0,standard,false,false,false,false,false,false,false\nORD-009,true,150.0,standard,false,false,false,false,true,true,false\nORD-010,true,200.0,standard,false,false,false,false,false,false,false\nORD-011,true,200.0,express,true,false,false,false,false,false,false\nORD-012,true,200.0,express,false,true,false,false,false,false,false\nORD-013,false,500.0,standard,false,false,false,false,false,false,false\nORD-014,true,75.0,standard,false,false,false,false,true,false,false\nORD-015,true,200.0,standard,false,false,false,false,false,false,false",
+    "gold_violations": [
+      {
+        "row_id": "ORD-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ORD-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ORD-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 2
+  },
+  {
+    "category": "order_compliance",
+    "rules": [
+      "Rule-A: Orders from unverified customers (customer_verified=false) with order_value > 600 must have manual_review=true.",
+      "Rule-B: Express shipping (shipping_type=express) is prohibited when the order has fragile items (has_fragile=true) AND the destination is international (is_international=true).",
+      "Rule-C: A discount code (discount_applied=true) cannot be used on orders that already have a promotional price (has_promo_price=true).",
+      "Rule-D: Gift wrapping (gift_wrap=true) is not available for orders with order_value < 50 OR for digital-only orders (is_digital=true)."
+    ],
+    "data_csv": "order_id,customer_verified,order_value,shipping_type,has_fragile,is_international,has_promo_price,discount_applied,gift_wrap,is_digital,manual_review\nORD-001,false,700,standard,false,false,false,false,false,false,false\nORD-002,true,200.0,standard,false,false,false,false,false,false,false\nORD-003,true,200.0,express,true,true,false,false,false,false,false\nORD-004,true,200.0,standard,false,false,false,false,false,false,false\nORD-005,true,200.0,standard,false,false,true,true,false,false,false\nORD-006,true,200.0,standard,false,false,false,false,false,false,false\nORD-007,true,35.0,standard,false,false,false,false,true,false,false\nORD-008,true,200.0,standard,false,false,false,false,false,false,false\nORD-009,true,150.0,standard,false,false,false,false,true,true,false\nORD-010,true,200.0,standard,false,false,false,false,false,false,false\nORD-011,true,200.0,express,true,false,false,false,false,false,false\nORD-012,true,200.0,express,false,true,false,false,false,false,false\nORD-013,false,600.0,standard,false,false,false,false,false,false,false\nORD-014,true,75.0,standard,false,false,false,false,true,false,false\nORD-015,true,200.0,standard,false,false,false,false,false,false,false",
+    "gold_violations": [
+      {
+        "row_id": "ORD-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ORD-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ORD-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 3
+  },
+  {
+    "category": "order_compliance",
+    "rules": [
+      "Rule-A: Orders from unverified customers (customer_verified=false) with order_value > 250 must have manual_review=true.",
+      "Rule-B: Express shipping (shipping_type=express) is prohibited when the order has fragile items (has_fragile=true) AND the destination is international (is_international=true).",
+      "Rule-C: A discount code (discount_applied=true) cannot be used on orders that already have a promotional price (has_promo_price=true).",
+      "Rule-D: Gift wrapping (gift_wrap=true) is not available for orders with order_value < 50 OR for digital-only orders (is_digital=true)."
+    ],
+    "data_csv": "order_id,customer_verified,order_value,shipping_type,has_fragile,is_international,has_promo_price,discount_applied,gift_wrap,is_digital,manual_review\nORD-001,false,350,standard,false,false,false,false,false,false,false\nORD-002,true,200.0,standard,false,false,false,false,false,false,false\nORD-003,true,200.0,express,true,true,false,false,false,false,false\nORD-004,true,200.0,standard,false,false,false,false,false,false,false\nORD-005,true,200.0,standard,false,false,true,true,false,false,false\nORD-006,true,200.0,standard,false,false,false,false,false,false,false\nORD-007,true,35.0,standard,false,false,false,false,true,false,false\nORD-008,true,200.0,standard,false,false,false,false,false,false,false\nORD-009,true,150.0,standard,false,false,false,false,true,true,false\nORD-010,true,200.0,standard,false,false,false,false,false,false,false\nORD-011,true,200.0,express,true,false,false,false,false,false,false\nORD-012,true,200.0,express,false,true,false,false,false,false,false\nORD-013,false,250.0,standard,false,false,false,false,false,false,false\nORD-014,true,75.0,standard,false,false,false,false,true,false,false\nORD-015,true,200.0,standard,false,false,false,false,false,false,false",
+    "gold_violations": [
+      {
+        "row_id": "ORD-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ORD-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ORD-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 4
+  },
+  {
+    "category": "order_compliance",
+    "rules": [
+      "Rule-A: Orders from unverified customers (customer_verified=false) with order_value > 450 must have manual_review=true.",
+      "Rule-B: Express shipping (shipping_type=express) is prohibited when the order has fragile items (has_fragile=true) AND the destination is international (is_international=true).",
+      "Rule-C: A discount code (discount_applied=true) cannot be used on orders that already have a promotional price (has_promo_price=true).",
+      "Rule-D: Gift wrapping (gift_wrap=true) is not available for orders with order_value < 50 OR for digital-only orders (is_digital=true)."
+    ],
+    "data_csv": "order_id,customer_verified,order_value,shipping_type,has_fragile,is_international,has_promo_price,discount_applied,gift_wrap,is_digital,manual_review\nORD-001,false,550,standard,false,false,false,false,false,false,false\nORD-002,true,200.0,standard,false,false,false,false,false,false,false\nORD-003,true,200.0,express,true,true,false,false,false,false,false\nORD-004,true,200.0,standard,false,false,false,false,false,false,false\nORD-005,true,200.0,standard,false,false,true,true,false,false,false\nORD-006,true,200.0,standard,false,false,false,false,false,false,false\nORD-007,true,35.0,standard,false,false,false,false,true,false,false\nORD-008,true,200.0,standard,false,false,false,false,false,false,false\nORD-009,true,150.0,standard,false,false,false,false,true,true,false\nORD-010,true,200.0,standard,false,false,false,false,false,false,false\nORD-011,true,200.0,express,true,false,false,false,false,false,false\nORD-012,true,200.0,express,false,true,false,false,false,false,false\nORD-013,false,450.0,standard,false,false,false,false,false,false,false\nORD-014,true,75.0,standard,false,false,false,false,true,false,false\nORD-015,true,200.0,standard,false,false,false,false,false,false,false",
+    "gold_violations": [
+      {
+        "row_id": "ORD-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ORD-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ORD-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 5
+  },
+  {
+    "category": "order_compliance",
+    "rules": [
+      "Rule-A: Orders from unverified customers (customer_verified=false) with order_value > 350 must have manual_review=true.",
+      "Rule-B: Express shipping (shipping_type=express) is prohibited when the order has fragile items (has_fragile=true) AND the destination is international (is_international=true).",
+      "Rule-C: A discount code (discount_applied=true) cannot be used on orders that already have a promotional price (has_promo_price=true).",
+      "Rule-D: Gift wrapping (gift_wrap=true) is not available for orders with order_value < 50 OR for digital-only orders (is_digital=true)."
+    ],
+    "data_csv": "order_id,customer_verified,order_value,shipping_type,has_fragile,is_international,has_promo_price,discount_applied,gift_wrap,is_digital,manual_review\nORD-001,false,450,standard,false,false,false,false,false,false,false\nORD-002,true,200.0,standard,false,false,false,false,false,false,false\nORD-003,true,200.0,express,true,true,false,false,false,false,false\nORD-004,true,200.0,standard,false,false,false,false,false,false,false\nORD-005,true,200.0,standard,false,false,true,true,false,false,false\nORD-006,true,200.0,standard,false,false,false,false,false,false,false\nORD-007,true,35.0,standard,false,false,false,false,true,false,false\nORD-008,true,200.0,standard,false,false,false,false,false,false,false\nORD-009,true,150.0,standard,false,false,false,false,true,true,false\nORD-010,true,200.0,standard,false,false,false,false,false,false,false\nORD-011,true,200.0,express,true,false,false,false,false,false,false\nORD-012,true,200.0,express,false,true,false,false,false,false,false\nORD-013,false,350.0,standard,false,false,false,false,false,false,false\nORD-014,true,75.0,standard,false,false,false,false,true,false,false\nORD-015,true,200.0,standard,false,false,false,false,false,false,false",
+    "gold_violations": [
+      {
+        "row_id": "ORD-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ORD-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ORD-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 6
+  },
+  {
+    "category": "order_compliance",
+    "rules": [
+      "Rule-A: Orders from unverified customers (customer_verified=false) with order_value > 500 must have manual_review=true.",
+      "Rule-B: Express shipping (shipping_type=express) is prohibited when the order has fragile items (has_fragile=true) AND the destination is international (is_international=true).",
+      "Rule-C: A discount code (discount_applied=true) cannot be used on orders that already have a promotional price (has_promo_price=true).",
+      "Rule-D: Gift wrapping (gift_wrap=true) is not available for orders with order_value < 50 OR for digital-only orders (is_digital=true)."
+    ],
+    "data_csv": "order_id,customer_verified,order_value,shipping_type,has_fragile,is_international,has_promo_price,discount_applied,gift_wrap,is_digital,manual_review\nORD-001,false,600,standard,false,false,false,false,false,false,false\nORD-002,true,200.0,standard,false,false,false,false,false,false,false\nORD-003,true,200.0,express,true,true,false,false,false,false,false\nORD-004,true,200.0,standard,false,false,false,false,false,false,false\nORD-005,true,200.0,standard,false,false,true,true,false,false,false\nORD-006,true,200.0,standard,false,false,false,false,false,false,false\nORD-007,true,35.0,standard,false,false,false,false,true,false,false\nORD-008,true,200.0,standard,false,false,false,false,false,false,false\nORD-009,true,150.0,standard,false,false,false,false,true,true,false\nORD-010,true,200.0,standard,false,false,false,false,false,false,false\nORD-011,true,200.0,express,true,false,false,false,false,false,false\nORD-012,true,200.0,express,false,true,false,false,false,false,false\nORD-013,false,500.0,standard,false,false,false,false,false,false,false\nORD-014,true,75.0,standard,false,false,false,false,true,false,false\nORD-015,true,200.0,standard,false,false,false,false,false,false,false",
+    "gold_violations": [
+      {
+        "row_id": "ORD-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ORD-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ORD-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 7
+  },
+  {
+    "category": "order_compliance",
+    "rules": [
+      "Rule-A: Orders from unverified customers (customer_verified=false) with order_value > 550 must have manual_review=true.",
+      "Rule-B: Express shipping (shipping_type=express) is prohibited when the order has fragile items (has_fragile=true) AND the destination is international (is_international=true).",
+      "Rule-C: A discount code (discount_applied=true) cannot be used on orders that already have a promotional price (has_promo_price=true).",
+      "Rule-D: Gift wrapping (gift_wrap=true) is not available for orders with order_value < 50 OR for digital-only orders (is_digital=true)."
+    ],
+    "data_csv": "order_id,customer_verified,order_value,shipping_type,has_fragile,is_international,has_promo_price,discount_applied,gift_wrap,is_digital,manual_review\nORD-001,false,650,standard,false,false,false,false,false,false,false\nORD-002,true,200.0,standard,false,false,false,false,false,false,false\nORD-003,true,200.0,express,true,true,false,false,false,false,false\nORD-004,true,200.0,standard,false,false,false,false,false,false,false\nORD-005,true,200.0,standard,false,false,true,true,false,false,false\nORD-006,true,200.0,standard,false,false,false,false,false,false,false\nORD-007,true,35.0,standard,false,false,false,false,true,false,false\nORD-008,true,200.0,standard,false,false,false,false,false,false,false\nORD-009,true,150.0,standard,false,false,false,false,true,true,false\nORD-010,true,200.0,standard,false,false,false,false,false,false,false\nORD-011,true,200.0,express,true,false,false,false,false,false,false\nORD-012,true,200.0,express,false,true,false,false,false,false,false\nORD-013,false,550.0,standard,false,false,false,false,false,false,false\nORD-014,true,75.0,standard,false,false,false,false,true,false,false\nORD-015,true,200.0,standard,false,false,false,false,false,false,false",
+    "gold_violations": [
+      {
+        "row_id": "ORD-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ORD-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ORD-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 8
+  },
+  {
+    "category": "order_compliance",
+    "rules": [
+      "Rule-A: Orders from unverified customers (customer_verified=false) with order_value > 400 must have manual_review=true.",
+      "Rule-B: Express shipping (shipping_type=express) is prohibited when the order has fragile items (has_fragile=true) AND the destination is international (is_international=true).",
+      "Rule-C: A discount code (discount_applied=true) cannot be used on orders that already have a promotional price (has_promo_price=true).",
+      "Rule-D: Gift wrapping (gift_wrap=true) is not available for orders with order_value < 50 OR for digital-only orders (is_digital=true)."
+    ],
+    "data_csv": "order_id,customer_verified,order_value,shipping_type,has_fragile,is_international,has_promo_price,discount_applied,gift_wrap,is_digital,manual_review\nORD-001,false,500,standard,false,false,false,false,false,false,false\nORD-002,true,200.0,standard,false,false,false,false,false,false,false\nORD-003,true,200.0,express,true,true,false,false,false,false,false\nORD-004,true,200.0,standard,false,false,false,false,false,false,false\nORD-005,true,200.0,standard,false,false,true,true,false,false,false\nORD-006,true,200.0,standard,false,false,false,false,false,false,false\nORD-007,true,35.0,standard,false,false,false,false,true,false,false\nORD-008,true,200.0,standard,false,false,false,false,false,false,false\nORD-009,true,150.0,standard,false,false,false,false,true,true,false\nORD-010,true,200.0,standard,false,false,false,false,false,false,false\nORD-011,true,200.0,express,true,false,false,false,false,false,false\nORD-012,true,200.0,express,false,true,false,false,false,false,false\nORD-013,false,400.0,standard,false,false,false,false,false,false,false\nORD-014,true,75.0,standard,false,false,false,false,true,false,false\nORD-015,true,200.0,standard,false,false,false,false,false,false,false",
+    "gold_violations": [
+      {
+        "row_id": "ORD-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ORD-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ORD-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ORD-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 9
+  },
+  {
+    "category": "hr_policy",
+    "rules": [
+      "Rule-A: Employees with performance_score < 2.5 AND tenure_years < 1.0 must have pip_required=true.",
+      "Rule-B: Employees with role=manager AND direct_reports > 8 must have management_cert=true.",
+      "Rule-C: Remote employees (is_remote=true) outside Engineering cannot have hardware_budget > 2000.",
+      "Rule-D: Employees with attrition_risk=high who have NOT received a retention action (retention_action=false) must have needs_escalation=true."
+    ],
+    "data_csv": "emp_id,department,role,tenure_years,performance_score,is_remote,direct_reports,management_cert,hardware_budget,pip_required,attrition_risk,retention_action,needs_escalation\nEMP-001,Sales,individual,0.7,2.1,false,0,true,1500,false,low,true,false\nEMP-002,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-003,Sales,manager,3.0,4.0,false,11,false,1500,false,low,true,false\nEMP-004,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-005,Sales,individual,3.0,4.0,true,0,true,2400,false,low,true,false\nEMP-006,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-007,Sales,individual,3.0,4.0,false,0,true,1500,false,high,false,false\nEMP-008,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-009,Sales,individual,3.0,4.0,false,0,true,1500,false,high,false,false\nEMP-010,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-011,Sales,individual,1.5,2.2,false,0,true,1500,false,low,true,false\nEMP-012,Sales,manager,3.0,4.0,false,8,false,1500,false,low,true,false\nEMP-013,Engineering,individual,3.0,4.0,true,0,true,2500,false,low,true,false\nEMP-014,Sales,individual,3.0,4.0,false,0,true,1500,false,high,true,false\nEMP-015,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false",
+    "gold_violations": [
+      {
+        "row_id": "EMP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "EMP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "EMP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 10
+  },
+  {
+    "category": "hr_policy",
+    "rules": [
+      "Rule-A: Employees with performance_score < 2.0 AND tenure_years < 1.5 must have pip_required=true.",
+      "Rule-B: Employees with role=manager AND direct_reports > 6 must have management_cert=true.",
+      "Rule-C: Remote employees (is_remote=true) outside Engineering cannot have hardware_budget > 1500.",
+      "Rule-D: Employees with attrition_risk=high who have NOT received a retention action (retention_action=false) must have needs_escalation=true."
+    ],
+    "data_csv": "emp_id,department,role,tenure_years,performance_score,is_remote,direct_reports,management_cert,hardware_budget,pip_required,attrition_risk,retention_action,needs_escalation\nEMP-001,Sales,individual,1.2,1.6,false,0,true,1000,false,low,true,false\nEMP-002,Sales,individual,3.0,4.0,false,0,true,1000,false,low,true,false\nEMP-003,Sales,manager,3.0,4.0,false,9,false,1000,false,low,true,false\nEMP-004,Sales,individual,3.0,4.0,false,0,true,1000,false,low,true,false\nEMP-005,Sales,individual,3.0,4.0,true,0,true,1900,false,low,true,false\nEMP-006,Sales,individual,3.0,4.0,false,0,true,1000,false,low,true,false\nEMP-007,Sales,individual,3.0,4.0,false,0,true,1000,false,high,false,false\nEMP-008,Sales,individual,3.0,4.0,false,0,true,1000,false,low,true,false\nEMP-009,Sales,individual,3.0,4.0,false,0,true,1000,false,high,false,false\nEMP-010,Sales,individual,3.0,4.0,false,0,true,1000,false,low,true,false\nEMP-011,Sales,individual,2.0,1.7,false,0,true,1000,false,low,true,false\nEMP-012,Sales,manager,3.0,4.0,false,6,false,1000,false,low,true,false\nEMP-013,Engineering,individual,3.0,4.0,true,0,true,2000,false,low,true,false\nEMP-014,Sales,individual,3.0,4.0,false,0,true,1000,false,high,true,false\nEMP-015,Sales,individual,3.0,4.0,false,0,true,1000,false,low,true,false",
+    "gold_violations": [
+      {
+        "row_id": "EMP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "EMP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "EMP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 11
+  },
+  {
+    "category": "hr_policy",
+    "rules": [
+      "Rule-A: Employees with performance_score < 3.0 AND tenure_years < 1.0 must have pip_required=true.",
+      "Rule-B: Employees with role=manager AND direct_reports > 10 must have management_cert=true.",
+      "Rule-C: Remote employees (is_remote=true) outside Engineering cannot have hardware_budget > 2500.",
+      "Rule-D: Employees with attrition_risk=high who have NOT received a retention action (retention_action=false) must have needs_escalation=true."
+    ],
+    "data_csv": "emp_id,department,role,tenure_years,performance_score,is_remote,direct_reports,management_cert,hardware_budget,pip_required,attrition_risk,retention_action,needs_escalation\nEMP-001,Sales,individual,0.7,2.6,false,0,true,2000,false,low,true,false\nEMP-002,Sales,individual,3.0,4.0,false,0,true,2000,false,low,true,false\nEMP-003,Sales,manager,3.0,4.0,false,13,false,2000,false,low,true,false\nEMP-004,Sales,individual,3.0,4.0,false,0,true,2000,false,low,true,false\nEMP-005,Sales,individual,3.0,4.0,true,0,true,2900,false,low,true,false\nEMP-006,Sales,individual,3.0,4.0,false,0,true,2000,false,low,true,false\nEMP-007,Sales,individual,3.0,4.0,false,0,true,2000,false,high,false,false\nEMP-008,Sales,individual,3.0,4.0,false,0,true,2000,false,low,true,false\nEMP-009,Sales,individual,3.0,4.0,false,0,true,2000,false,high,false,false\nEMP-010,Sales,individual,3.0,4.0,false,0,true,2000,false,low,true,false\nEMP-011,Sales,individual,1.5,2.7,false,0,true,2000,false,low,true,false\nEMP-012,Sales,manager,3.0,4.0,false,10,false,2000,false,low,true,false\nEMP-013,Engineering,individual,3.0,4.0,true,0,true,3000,false,low,true,false\nEMP-014,Sales,individual,3.0,4.0,false,0,true,2000,false,high,true,false\nEMP-015,Sales,individual,3.0,4.0,false,0,true,2000,false,low,true,false",
+    "gold_violations": [
+      {
+        "row_id": "EMP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "EMP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "EMP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 12
+  },
+  {
+    "category": "hr_policy",
+    "rules": [
+      "Rule-A: Employees with performance_score < 2.5 AND tenure_years < 2.0 must have pip_required=true.",
+      "Rule-B: Employees with role=manager AND direct_reports > 8 must have management_cert=true.",
+      "Rule-C: Remote employees (is_remote=true) outside Engineering cannot have hardware_budget > 2000.",
+      "Rule-D: Employees with attrition_risk=high who have NOT received a retention action (retention_action=false) must have needs_escalation=true."
+    ],
+    "data_csv": "emp_id,department,role,tenure_years,performance_score,is_remote,direct_reports,management_cert,hardware_budget,pip_required,attrition_risk,retention_action,needs_escalation\nEMP-001,Sales,individual,1.7,2.1,false,0,true,1500,false,low,true,false\nEMP-002,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-003,Sales,manager,3.0,4.0,false,11,false,1500,false,low,true,false\nEMP-004,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-005,Sales,individual,3.0,4.0,true,0,true,2400,false,low,true,false\nEMP-006,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-007,Sales,individual,3.0,4.0,false,0,true,1500,false,high,false,false\nEMP-008,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-009,Sales,individual,3.0,4.0,false,0,true,1500,false,high,false,false\nEMP-010,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-011,Sales,individual,2.5,2.2,false,0,true,1500,false,low,true,false\nEMP-012,Sales,manager,3.0,4.0,false,8,false,1500,false,low,true,false\nEMP-013,Engineering,individual,3.0,4.0,true,0,true,2500,false,low,true,false\nEMP-014,Sales,individual,3.0,4.0,false,0,true,1500,false,high,true,false\nEMP-015,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false",
+    "gold_violations": [
+      {
+        "row_id": "EMP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "EMP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "EMP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 13
+  },
+  {
+    "category": "hr_policy",
+    "rules": [
+      "Rule-A: Employees with performance_score < 2.0 AND tenure_years < 1.0 must have pip_required=true.",
+      "Rule-B: Employees with role=manager AND direct_reports > 7 must have management_cert=true.",
+      "Rule-C: Remote employees (is_remote=true) outside Engineering cannot have hardware_budget > 1800.",
+      "Rule-D: Employees with attrition_risk=high who have NOT received a retention action (retention_action=false) must have needs_escalation=true."
+    ],
+    "data_csv": "emp_id,department,role,tenure_years,performance_score,is_remote,direct_reports,management_cert,hardware_budget,pip_required,attrition_risk,retention_action,needs_escalation\nEMP-001,Sales,individual,0.7,1.6,false,0,true,1300,false,low,true,false\nEMP-002,Sales,individual,3.0,4.0,false,0,true,1300,false,low,true,false\nEMP-003,Sales,manager,3.0,4.0,false,10,false,1300,false,low,true,false\nEMP-004,Sales,individual,3.0,4.0,false,0,true,1300,false,low,true,false\nEMP-005,Sales,individual,3.0,4.0,true,0,true,2200,false,low,true,false\nEMP-006,Sales,individual,3.0,4.0,false,0,true,1300,false,low,true,false\nEMP-007,Sales,individual,3.0,4.0,false,0,true,1300,false,high,false,false\nEMP-008,Sales,individual,3.0,4.0,false,0,true,1300,false,low,true,false\nEMP-009,Sales,individual,3.0,4.0,false,0,true,1300,false,high,false,false\nEMP-010,Sales,individual,3.0,4.0,false,0,true,1300,false,low,true,false\nEMP-011,Sales,individual,1.5,1.7,false,0,true,1300,false,low,true,false\nEMP-012,Sales,manager,3.0,4.0,false,7,false,1300,false,low,true,false\nEMP-013,Engineering,individual,3.0,4.0,true,0,true,2300,false,low,true,false\nEMP-014,Sales,individual,3.0,4.0,false,0,true,1300,false,high,true,false\nEMP-015,Sales,individual,3.0,4.0,false,0,true,1300,false,low,true,false",
+    "gold_violations": [
+      {
+        "row_id": "EMP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "EMP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "EMP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 14
+  },
+  {
+    "category": "hr_policy",
+    "rules": [
+      "Rule-A: Employees with performance_score < 3.0 AND tenure_years < 1.5 must have pip_required=true.",
+      "Rule-B: Employees with role=manager AND direct_reports > 9 must have management_cert=true.",
+      "Rule-C: Remote employees (is_remote=true) outside Engineering cannot have hardware_budget > 2200.",
+      "Rule-D: Employees with attrition_risk=high who have NOT received a retention action (retention_action=false) must have needs_escalation=true."
+    ],
+    "data_csv": "emp_id,department,role,tenure_years,performance_score,is_remote,direct_reports,management_cert,hardware_budget,pip_required,attrition_risk,retention_action,needs_escalation\nEMP-001,Sales,individual,1.2,2.6,false,0,true,1700,false,low,true,false\nEMP-002,Sales,individual,3.0,4.0,false,0,true,1700,false,low,true,false\nEMP-003,Sales,manager,3.0,4.0,false,12,false,1700,false,low,true,false\nEMP-004,Sales,individual,3.0,4.0,false,0,true,1700,false,low,true,false\nEMP-005,Sales,individual,3.0,4.0,true,0,true,2600,false,low,true,false\nEMP-006,Sales,individual,3.0,4.0,false,0,true,1700,false,low,true,false\nEMP-007,Sales,individual,3.0,4.0,false,0,true,1700,false,high,false,false\nEMP-008,Sales,individual,3.0,4.0,false,0,true,1700,false,low,true,false\nEMP-009,Sales,individual,3.0,4.0,false,0,true,1700,false,high,false,false\nEMP-010,Sales,individual,3.0,4.0,false,0,true,1700,false,low,true,false\nEMP-011,Sales,individual,2.0,2.7,false,0,true,1700,false,low,true,false\nEMP-012,Sales,manager,3.0,4.0,false,9,false,1700,false,low,true,false\nEMP-013,Engineering,individual,3.0,4.0,true,0,true,2700,false,low,true,false\nEMP-014,Sales,individual,3.0,4.0,false,0,true,1700,false,high,true,false\nEMP-015,Sales,individual,3.0,4.0,false,0,true,1700,false,low,true,false",
+    "gold_violations": [
+      {
+        "row_id": "EMP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "EMP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "EMP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 15
+  },
+  {
+    "category": "hr_policy",
+    "rules": [
+      "Rule-A: Employees with performance_score < 2.5 AND tenure_years < 1.0 must have pip_required=true.",
+      "Rule-B: Employees with role=manager AND direct_reports > 8 must have management_cert=true.",
+      "Rule-C: Remote employees (is_remote=true) outside Engineering cannot have hardware_budget > 2000.",
+      "Rule-D: Employees with attrition_risk=high who have NOT received a retention action (retention_action=false) must have needs_escalation=true."
+    ],
+    "data_csv": "emp_id,department,role,tenure_years,performance_score,is_remote,direct_reports,management_cert,hardware_budget,pip_required,attrition_risk,retention_action,needs_escalation\nEMP-001,Sales,individual,0.7,2.1,false,0,true,1500,false,low,true,false\nEMP-002,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-003,Sales,manager,3.0,4.0,false,11,false,1500,false,low,true,false\nEMP-004,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-005,Sales,individual,3.0,4.0,true,0,true,2400,false,low,true,false\nEMP-006,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-007,Sales,individual,3.0,4.0,false,0,true,1500,false,high,false,false\nEMP-008,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-009,Sales,individual,3.0,4.0,false,0,true,1500,false,high,false,false\nEMP-010,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-011,Sales,individual,1.5,2.2,false,0,true,1500,false,low,true,false\nEMP-012,Sales,manager,3.0,4.0,false,8,false,1500,false,low,true,false\nEMP-013,Engineering,individual,3.0,4.0,true,0,true,2500,false,low,true,false\nEMP-014,Sales,individual,3.0,4.0,false,0,true,1500,false,high,true,false\nEMP-015,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false",
+    "gold_violations": [
+      {
+        "row_id": "EMP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "EMP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "EMP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 16
+  },
+  {
+    "category": "hr_policy",
+    "rules": [
+      "Rule-A: Employees with performance_score < 2.0 AND tenure_years < 2.0 must have pip_required=true.",
+      "Rule-B: Employees with role=manager AND direct_reports > 6 must have management_cert=true.",
+      "Rule-C: Remote employees (is_remote=true) outside Engineering cannot have hardware_budget > 1500.",
+      "Rule-D: Employees with attrition_risk=high who have NOT received a retention action (retention_action=false) must have needs_escalation=true."
+    ],
+    "data_csv": "emp_id,department,role,tenure_years,performance_score,is_remote,direct_reports,management_cert,hardware_budget,pip_required,attrition_risk,retention_action,needs_escalation\nEMP-001,Sales,individual,1.7,1.6,false,0,true,1000,false,low,true,false\nEMP-002,Sales,individual,3.0,4.0,false,0,true,1000,false,low,true,false\nEMP-003,Sales,manager,3.0,4.0,false,9,false,1000,false,low,true,false\nEMP-004,Sales,individual,3.0,4.0,false,0,true,1000,false,low,true,false\nEMP-005,Sales,individual,3.0,4.0,true,0,true,1900,false,low,true,false\nEMP-006,Sales,individual,3.0,4.0,false,0,true,1000,false,low,true,false\nEMP-007,Sales,individual,3.0,4.0,false,0,true,1000,false,high,false,false\nEMP-008,Sales,individual,3.0,4.0,false,0,true,1000,false,low,true,false\nEMP-009,Sales,individual,3.0,4.0,false,0,true,1000,false,high,false,false\nEMP-010,Sales,individual,3.0,4.0,false,0,true,1000,false,low,true,false\nEMP-011,Sales,individual,2.5,1.7,false,0,true,1000,false,low,true,false\nEMP-012,Sales,manager,3.0,4.0,false,6,false,1000,false,low,true,false\nEMP-013,Engineering,individual,3.0,4.0,true,0,true,2000,false,low,true,false\nEMP-014,Sales,individual,3.0,4.0,false,0,true,1000,false,high,true,false\nEMP-015,Sales,individual,3.0,4.0,false,0,true,1000,false,low,true,false",
+    "gold_violations": [
+      {
+        "row_id": "EMP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "EMP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "EMP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 17
+  },
+  {
+    "category": "hr_policy",
+    "rules": [
+      "Rule-A: Employees with performance_score < 2.5 AND tenure_years < 1.5 must have pip_required=true.",
+      "Rule-B: Employees with role=manager AND direct_reports > 10 must have management_cert=true.",
+      "Rule-C: Remote employees (is_remote=true) outside Engineering cannot have hardware_budget > 2500.",
+      "Rule-D: Employees with attrition_risk=high who have NOT received a retention action (retention_action=false) must have needs_escalation=true."
+    ],
+    "data_csv": "emp_id,department,role,tenure_years,performance_score,is_remote,direct_reports,management_cert,hardware_budget,pip_required,attrition_risk,retention_action,needs_escalation\nEMP-001,Sales,individual,1.2,2.1,false,0,true,2000,false,low,true,false\nEMP-002,Sales,individual,3.0,4.0,false,0,true,2000,false,low,true,false\nEMP-003,Sales,manager,3.0,4.0,false,13,false,2000,false,low,true,false\nEMP-004,Sales,individual,3.0,4.0,false,0,true,2000,false,low,true,false\nEMP-005,Sales,individual,3.0,4.0,true,0,true,2900,false,low,true,false\nEMP-006,Sales,individual,3.0,4.0,false,0,true,2000,false,low,true,false\nEMP-007,Sales,individual,3.0,4.0,false,0,true,2000,false,high,false,false\nEMP-008,Sales,individual,3.0,4.0,false,0,true,2000,false,low,true,false\nEMP-009,Sales,individual,3.0,4.0,false,0,true,2000,false,high,false,false\nEMP-010,Sales,individual,3.0,4.0,false,0,true,2000,false,low,true,false\nEMP-011,Sales,individual,2.0,2.2,false,0,true,2000,false,low,true,false\nEMP-012,Sales,manager,3.0,4.0,false,10,false,2000,false,low,true,false\nEMP-013,Engineering,individual,3.0,4.0,true,0,true,3000,false,low,true,false\nEMP-014,Sales,individual,3.0,4.0,false,0,true,2000,false,high,true,false\nEMP-015,Sales,individual,3.0,4.0,false,0,true,2000,false,low,true,false",
+    "gold_violations": [
+      {
+        "row_id": "EMP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "EMP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "EMP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 18
+  },
+  {
+    "category": "hr_policy",
+    "rules": [
+      "Rule-A: Employees with performance_score < 3.0 AND tenure_years < 1.0 must have pip_required=true.",
+      "Rule-B: Employees with role=manager AND direct_reports > 8 must have management_cert=true.",
+      "Rule-C: Remote employees (is_remote=true) outside Engineering cannot have hardware_budget > 2000.",
+      "Rule-D: Employees with attrition_risk=high who have NOT received a retention action (retention_action=false) must have needs_escalation=true."
+    ],
+    "data_csv": "emp_id,department,role,tenure_years,performance_score,is_remote,direct_reports,management_cert,hardware_budget,pip_required,attrition_risk,retention_action,needs_escalation\nEMP-001,Sales,individual,0.7,2.6,false,0,true,1500,false,low,true,false\nEMP-002,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-003,Sales,manager,3.0,4.0,false,11,false,1500,false,low,true,false\nEMP-004,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-005,Sales,individual,3.0,4.0,true,0,true,2400,false,low,true,false\nEMP-006,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-007,Sales,individual,3.0,4.0,false,0,true,1500,false,high,false,false\nEMP-008,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-009,Sales,individual,3.0,4.0,false,0,true,1500,false,high,false,false\nEMP-010,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false\nEMP-011,Sales,individual,1.5,2.7,false,0,true,1500,false,low,true,false\nEMP-012,Sales,manager,3.0,4.0,false,8,false,1500,false,low,true,false\nEMP-013,Engineering,individual,3.0,4.0,true,0,true,2500,false,low,true,false\nEMP-014,Sales,individual,3.0,4.0,false,0,true,1500,false,high,true,false\nEMP-015,Sales,individual,3.0,4.0,false,0,true,1500,false,low,true,false",
+    "gold_violations": [
+      {
+        "row_id": "EMP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "EMP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "EMP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "EMP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 19
+  },
+  {
+    "category": "inventory_rules",
+    "rules": [
+      "Rule-A: Items where stock_level <= reorder_point must have reorder_pending=true.",
+      "Rule-B: Perishable items (is_perishable=true) with days_until_expiry <= 7 AND stock_level > 200 must have markdown_flagged=true.",
+      "Rule-C: Items where selling_price < cost_price * 1.5 must have pricing_alert=true.",
+      "Rule-D: Hazardous items (is_hazardous=true) in a non-compliant location (location_compliant=false) must have safety_hold=true."
+    ],
+    "data_csv": "item_id,stock_level,reorder_point,reorder_pending,is_perishable,days_until_expiry,markdown_flagged,cost_price,selling_price,pricing_alert,is_hazardous,location_compliant,safety_hold\nITEM-001,40,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-002,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-003,280,50,false,true,5,false,100.0,200.0,false,false,true,false\nITEM-004,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-005,150,50,false,false,30,false,100.0,110.0,false,false,true,false\nITEM-006,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-007,150,50,false,false,30,false,100.0,200.0,false,true,false,false\nITEM-008,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-009,50,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-010,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-011,170,50,false,true,5,false,100.0,200.0,false,false,true,false\nITEM-012,250,50,false,true,12,false,100.0,200.0,false,false,true,false\nITEM-013,150,50,false,false,30,false,100.0,200.0,false,true,true,false\nITEM-014,150,50,false,false,30,false,100.0,150.0,false,false,true,false\nITEM-015,150,50,false,false,30,false,100.0,200.0,false,false,true,false",
+    "gold_violations": [
+      {
+        "row_id": "ITEM-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ITEM-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ITEM-009",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      }
+    ],
+    "id": 20
+  },
+  {
+    "category": "inventory_rules",
+    "rules": [
+      "Rule-A: Items where stock_level <= reorder_point must have reorder_pending=true.",
+      "Rule-B: Perishable items (is_perishable=true) with days_until_expiry <= 5 AND stock_level > 150 must have markdown_flagged=true.",
+      "Rule-C: Items where selling_price < cost_price * 2.0 must have pricing_alert=true.",
+      "Rule-D: Hazardous items (is_hazardous=true) in a non-compliant location (location_compliant=false) must have safety_hold=true."
+    ],
+    "data_csv": "item_id,stock_level,reorder_point,reorder_pending,is_perishable,days_until_expiry,markdown_flagged,cost_price,selling_price,pricing_alert,is_hazardous,location_compliant,safety_hold\nITEM-001,40,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-002,150,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-003,230,50,false,true,3,false,100.0,250.0,false,false,true,false\nITEM-004,150,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-005,150,50,false,false,30,false,100.0,160.0,false,false,true,false\nITEM-006,150,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-007,150,50,false,false,30,false,100.0,250.0,false,true,false,false\nITEM-008,150,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-009,50,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-010,150,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-011,120,50,false,true,3,false,100.0,250.0,false,false,true,false\nITEM-012,200,50,false,true,10,false,100.0,250.0,false,false,true,false\nITEM-013,150,50,false,false,30,false,100.0,250.0,false,true,true,false\nITEM-014,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-015,150,50,false,false,30,false,100.0,250.0,false,false,true,false",
+    "gold_violations": [
+      {
+        "row_id": "ITEM-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ITEM-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ITEM-009",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      }
+    ],
+    "id": 21
+  },
+  {
+    "category": "inventory_rules",
+    "rules": [
+      "Rule-A: Items where stock_level <= reorder_point must have reorder_pending=true.",
+      "Rule-B: Perishable items (is_perishable=true) with days_until_expiry <= 10 AND stock_level > 250 must have markdown_flagged=true.",
+      "Rule-C: Items where selling_price < cost_price * 1.8 must have pricing_alert=true.",
+      "Rule-D: Hazardous items (is_hazardous=true) in a non-compliant location (location_compliant=false) must have safety_hold=true."
+    ],
+    "data_csv": "item_id,stock_level,reorder_point,reorder_pending,is_perishable,days_until_expiry,markdown_flagged,cost_price,selling_price,pricing_alert,is_hazardous,location_compliant,safety_hold\nITEM-001,40,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-002,150,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-003,330,50,false,true,8,false,100.0,230.0,false,false,true,false\nITEM-004,150,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-005,150,50,false,false,30,false,100.0,140.0,false,false,true,false\nITEM-006,150,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-007,150,50,false,false,30,false,100.0,230.0,false,true,false,false\nITEM-008,150,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-009,50,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-010,150,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-011,220,50,false,true,8,false,100.0,230.0,false,false,true,false\nITEM-012,300,50,false,true,15,false,100.0,230.0,false,false,true,false\nITEM-013,150,50,false,false,30,false,100.0,230.0,false,true,true,false\nITEM-014,150,50,false,false,30,false,100.0,180.0,false,false,true,false\nITEM-015,150,50,false,false,30,false,100.0,230.0,false,false,true,false",
+    "gold_violations": [
+      {
+        "row_id": "ITEM-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ITEM-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ITEM-009",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      }
+    ],
+    "id": 22
+  },
+  {
+    "category": "inventory_rules",
+    "rules": [
+      "Rule-A: Items where stock_level <= reorder_point must have reorder_pending=true.",
+      "Rule-B: Perishable items (is_perishable=true) with days_until_expiry <= 7 AND stock_level > 200 must have markdown_flagged=true.",
+      "Rule-C: Items where selling_price < cost_price * 1.5 must have pricing_alert=true.",
+      "Rule-D: Hazardous items (is_hazardous=true) in a non-compliant location (location_compliant=false) must have safety_hold=true."
+    ],
+    "data_csv": "item_id,stock_level,reorder_point,reorder_pending,is_perishable,days_until_expiry,markdown_flagged,cost_price,selling_price,pricing_alert,is_hazardous,location_compliant,safety_hold\nITEM-001,40,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-002,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-003,280,50,false,true,5,false,100.0,200.0,false,false,true,false\nITEM-004,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-005,150,50,false,false,30,false,100.0,110.0,false,false,true,false\nITEM-006,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-007,150,50,false,false,30,false,100.0,200.0,false,true,false,false\nITEM-008,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-009,50,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-010,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-011,170,50,false,true,5,false,100.0,200.0,false,false,true,false\nITEM-012,250,50,false,true,12,false,100.0,200.0,false,false,true,false\nITEM-013,150,50,false,false,30,false,100.0,200.0,false,true,true,false\nITEM-014,150,50,false,false,30,false,100.0,150.0,false,false,true,false\nITEM-015,150,50,false,false,30,false,100.0,200.0,false,false,true,false",
+    "gold_violations": [
+      {
+        "row_id": "ITEM-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ITEM-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ITEM-009",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      }
+    ],
+    "id": 23
+  },
+  {
+    "category": "inventory_rules",
+    "rules": [
+      "Rule-A: Items where stock_level <= reorder_point must have reorder_pending=true.",
+      "Rule-B: Perishable items (is_perishable=true) with days_until_expiry <= 5 AND stock_level > 150 must have markdown_flagged=true.",
+      "Rule-C: Items where selling_price < cost_price * 2.0 must have pricing_alert=true.",
+      "Rule-D: Hazardous items (is_hazardous=true) in a non-compliant location (location_compliant=false) must have safety_hold=true."
+    ],
+    "data_csv": "item_id,stock_level,reorder_point,reorder_pending,is_perishable,days_until_expiry,markdown_flagged,cost_price,selling_price,pricing_alert,is_hazardous,location_compliant,safety_hold\nITEM-001,40,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-002,150,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-003,230,50,false,true,3,false,100.0,250.0,false,false,true,false\nITEM-004,150,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-005,150,50,false,false,30,false,100.0,160.0,false,false,true,false\nITEM-006,150,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-007,150,50,false,false,30,false,100.0,250.0,false,true,false,false\nITEM-008,150,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-009,50,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-010,150,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-011,120,50,false,true,3,false,100.0,250.0,false,false,true,false\nITEM-012,200,50,false,true,10,false,100.0,250.0,false,false,true,false\nITEM-013,150,50,false,false,30,false,100.0,250.0,false,true,true,false\nITEM-014,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-015,150,50,false,false,30,false,100.0,250.0,false,false,true,false",
+    "gold_violations": [
+      {
+        "row_id": "ITEM-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ITEM-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ITEM-009",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      }
+    ],
+    "id": 24
+  },
+  {
+    "category": "inventory_rules",
+    "rules": [
+      "Rule-A: Items where stock_level <= reorder_point must have reorder_pending=true.",
+      "Rule-B: Perishable items (is_perishable=true) with days_until_expiry <= 10 AND stock_level > 250 must have markdown_flagged=true.",
+      "Rule-C: Items where selling_price < cost_price * 1.8 must have pricing_alert=true.",
+      "Rule-D: Hazardous items (is_hazardous=true) in a non-compliant location (location_compliant=false) must have safety_hold=true."
+    ],
+    "data_csv": "item_id,stock_level,reorder_point,reorder_pending,is_perishable,days_until_expiry,markdown_flagged,cost_price,selling_price,pricing_alert,is_hazardous,location_compliant,safety_hold\nITEM-001,40,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-002,150,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-003,330,50,false,true,8,false,100.0,230.0,false,false,true,false\nITEM-004,150,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-005,150,50,false,false,30,false,100.0,140.0,false,false,true,false\nITEM-006,150,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-007,150,50,false,false,30,false,100.0,230.0,false,true,false,false\nITEM-008,150,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-009,50,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-010,150,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-011,220,50,false,true,8,false,100.0,230.0,false,false,true,false\nITEM-012,300,50,false,true,15,false,100.0,230.0,false,false,true,false\nITEM-013,150,50,false,false,30,false,100.0,230.0,false,true,true,false\nITEM-014,150,50,false,false,30,false,100.0,180.0,false,false,true,false\nITEM-015,150,50,false,false,30,false,100.0,230.0,false,false,true,false",
+    "gold_violations": [
+      {
+        "row_id": "ITEM-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ITEM-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ITEM-009",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      }
+    ],
+    "id": 25
+  },
+  {
+    "category": "inventory_rules",
+    "rules": [
+      "Rule-A: Items where stock_level <= reorder_point must have reorder_pending=true.",
+      "Rule-B: Perishable items (is_perishable=true) with days_until_expiry <= 7 AND stock_level > 200 must have markdown_flagged=true.",
+      "Rule-C: Items where selling_price < cost_price * 1.5 must have pricing_alert=true.",
+      "Rule-D: Hazardous items (is_hazardous=true) in a non-compliant location (location_compliant=false) must have safety_hold=true."
+    ],
+    "data_csv": "item_id,stock_level,reorder_point,reorder_pending,is_perishable,days_until_expiry,markdown_flagged,cost_price,selling_price,pricing_alert,is_hazardous,location_compliant,safety_hold\nITEM-001,40,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-002,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-003,280,50,false,true,5,false,100.0,200.0,false,false,true,false\nITEM-004,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-005,150,50,false,false,30,false,100.0,110.0,false,false,true,false\nITEM-006,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-007,150,50,false,false,30,false,100.0,200.0,false,true,false,false\nITEM-008,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-009,50,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-010,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-011,170,50,false,true,5,false,100.0,200.0,false,false,true,false\nITEM-012,250,50,false,true,12,false,100.0,200.0,false,false,true,false\nITEM-013,150,50,false,false,30,false,100.0,200.0,false,true,true,false\nITEM-014,150,50,false,false,30,false,100.0,150.0,false,false,true,false\nITEM-015,150,50,false,false,30,false,100.0,200.0,false,false,true,false",
+    "gold_violations": [
+      {
+        "row_id": "ITEM-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ITEM-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ITEM-009",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      }
+    ],
+    "id": 26
+  },
+  {
+    "category": "inventory_rules",
+    "rules": [
+      "Rule-A: Items where stock_level <= reorder_point must have reorder_pending=true.",
+      "Rule-B: Perishable items (is_perishable=true) with days_until_expiry <= 5 AND stock_level > 150 must have markdown_flagged=true.",
+      "Rule-C: Items where selling_price < cost_price * 2.0 must have pricing_alert=true.",
+      "Rule-D: Hazardous items (is_hazardous=true) in a non-compliant location (location_compliant=false) must have safety_hold=true."
+    ],
+    "data_csv": "item_id,stock_level,reorder_point,reorder_pending,is_perishable,days_until_expiry,markdown_flagged,cost_price,selling_price,pricing_alert,is_hazardous,location_compliant,safety_hold\nITEM-001,40,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-002,150,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-003,230,50,false,true,3,false,100.0,250.0,false,false,true,false\nITEM-004,150,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-005,150,50,false,false,30,false,100.0,160.0,false,false,true,false\nITEM-006,150,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-007,150,50,false,false,30,false,100.0,250.0,false,true,false,false\nITEM-008,150,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-009,50,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-010,150,50,false,false,30,false,100.0,250.0,false,false,true,false\nITEM-011,120,50,false,true,3,false,100.0,250.0,false,false,true,false\nITEM-012,200,50,false,true,10,false,100.0,250.0,false,false,true,false\nITEM-013,150,50,false,false,30,false,100.0,250.0,false,true,true,false\nITEM-014,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-015,150,50,false,false,30,false,100.0,250.0,false,false,true,false",
+    "gold_violations": [
+      {
+        "row_id": "ITEM-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ITEM-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ITEM-009",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      }
+    ],
+    "id": 27
+  },
+  {
+    "category": "inventory_rules",
+    "rules": [
+      "Rule-A: Items where stock_level <= reorder_point must have reorder_pending=true.",
+      "Rule-B: Perishable items (is_perishable=true) with days_until_expiry <= 10 AND stock_level > 250 must have markdown_flagged=true.",
+      "Rule-C: Items where selling_price < cost_price * 1.8 must have pricing_alert=true.",
+      "Rule-D: Hazardous items (is_hazardous=true) in a non-compliant location (location_compliant=false) must have safety_hold=true."
+    ],
+    "data_csv": "item_id,stock_level,reorder_point,reorder_pending,is_perishable,days_until_expiry,markdown_flagged,cost_price,selling_price,pricing_alert,is_hazardous,location_compliant,safety_hold\nITEM-001,40,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-002,150,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-003,330,50,false,true,8,false,100.0,230.0,false,false,true,false\nITEM-004,150,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-005,150,50,false,false,30,false,100.0,140.0,false,false,true,false\nITEM-006,150,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-007,150,50,false,false,30,false,100.0,230.0,false,true,false,false\nITEM-008,150,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-009,50,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-010,150,50,false,false,30,false,100.0,230.0,false,false,true,false\nITEM-011,220,50,false,true,8,false,100.0,230.0,false,false,true,false\nITEM-012,300,50,false,true,15,false,100.0,230.0,false,false,true,false\nITEM-013,150,50,false,false,30,false,100.0,230.0,false,true,true,false\nITEM-014,150,50,false,false,30,false,100.0,180.0,false,false,true,false\nITEM-015,150,50,false,false,30,false,100.0,230.0,false,false,true,false",
+    "gold_violations": [
+      {
+        "row_id": "ITEM-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ITEM-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ITEM-009",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      }
+    ],
+    "id": 28
+  },
+  {
+    "category": "inventory_rules",
+    "rules": [
+      "Rule-A: Items where stock_level <= reorder_point must have reorder_pending=true.",
+      "Rule-B: Perishable items (is_perishable=true) with days_until_expiry <= 7 AND stock_level > 200 must have markdown_flagged=true.",
+      "Rule-C: Items where selling_price < cost_price * 1.5 must have pricing_alert=true.",
+      "Rule-D: Hazardous items (is_hazardous=true) in a non-compliant location (location_compliant=false) must have safety_hold=true."
+    ],
+    "data_csv": "item_id,stock_level,reorder_point,reorder_pending,is_perishable,days_until_expiry,markdown_flagged,cost_price,selling_price,pricing_alert,is_hazardous,location_compliant,safety_hold\nITEM-001,40,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-002,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-003,280,50,false,true,5,false,100.0,200.0,false,false,true,false\nITEM-004,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-005,150,50,false,false,30,false,100.0,110.0,false,false,true,false\nITEM-006,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-007,150,50,false,false,30,false,100.0,200.0,false,true,false,false\nITEM-008,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-009,50,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-010,150,50,false,false,30,false,100.0,200.0,false,false,true,false\nITEM-011,170,50,false,true,5,false,100.0,200.0,false,false,true,false\nITEM-012,250,50,false,true,12,false,100.0,200.0,false,false,true,false\nITEM-013,150,50,false,false,30,false,100.0,200.0,false,true,true,false\nITEM-014,150,50,false,false,30,false,100.0,150.0,false,false,true,false\nITEM-015,150,50,false,false,30,false,100.0,200.0,false,false,true,false",
+    "gold_violations": [
+      {
+        "row_id": "ITEM-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "ITEM-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "ITEM-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "ITEM-009",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      }
+    ],
+    "id": 29
+  },
+  {
+    "category": "loan_approval",
+    "rules": [
+      "Rule-A: Applications with credit_score < 620 must have status=declined.",
+      "Rule-B: Applications where loan_type=mortgage AND debt_to_income > 0.43 must have review_required=true.",
+      "Rule-C: Self-employed applicants (employment_type=self_employed) with tax_returns_filed < 2 must have docs_incomplete=true.",
+      "Rule-D: A 'qualified applicant' is defined as: credit_score >= 660 AND debt_to_income <= 0.36 AND income > 80000. Qualified applicants must NOT be sent to manual review (manual_review must be false). Flag qualified applicants where manual_review=true."
+    ],
+    "data_csv": "app_id,credit_score,debt_to_income,loan_type,employment_type,tax_returns_filed,income,status,review_required,docs_incomplete,manual_review\nAPP-001,580,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-002,700,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-003,700,0.48,mortgage,employed,3,110000,pending,false,false,false\nAPP-004,700,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-005,700,0.33,personal,self_employed,1,110000,pending,true,false,false\nAPP-006,700,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-007,690,0.31,personal,employed,3,105000,pending,true,false,true\nAPP-008,700,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-009,710,0.33,personal,employed,3,95000,pending,true,false,true\nAPP-010,700,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-011,700,0.48,mortgage,employed,3,110000,pending,true,false,false\nAPP-012,680,0.32,personal,employed,3,75000,pending,true,false,true\nAPP-013,700,0.33,personal,self_employed,2,110000,pending,true,false,false\nAPP-014,720,0.31,personal,employed,3,120000,pending,true,false,false\nAPP-015,700,0.33,personal,employed,3,110000,pending,true,false,false",
+    "gold_violations": [
+      {
+        "row_id": "APP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "APP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "APP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 30
+  },
+  {
+    "category": "loan_approval",
+    "rules": [
+      "Rule-A: Applications with credit_score < 600 must have status=declined.",
+      "Rule-B: Applications where loan_type=mortgage AND debt_to_income > 0.4 must have review_required=true.",
+      "Rule-C: Self-employed applicants (employment_type=self_employed) with tax_returns_filed < 2 must have docs_incomplete=true.",
+      "Rule-D: A 'qualified applicant' is defined as: credit_score >= 640 AND debt_to_income <= 0.33 AND income > 75000. Qualified applicants must NOT be sent to manual review (manual_review must be false). Flag qualified applicants where manual_review=true."
+    ],
+    "data_csv": "app_id,credit_score,debt_to_income,loan_type,employment_type,tax_returns_filed,income,status,review_required,docs_incomplete,manual_review\nAPP-001,560,0.3,personal,employed,3,105000,pending,true,false,false\nAPP-002,700,0.3,personal,employed,3,105000,pending,true,false,false\nAPP-003,700,0.45,mortgage,employed,3,105000,pending,false,false,false\nAPP-004,700,0.3,personal,employed,3,105000,pending,true,false,false\nAPP-005,700,0.3,personal,self_employed,1,105000,pending,true,false,false\nAPP-006,700,0.3,personal,employed,3,105000,pending,true,false,false\nAPP-007,670,0.28,personal,employed,3,100000,pending,true,false,true\nAPP-008,700,0.3,personal,employed,3,105000,pending,true,false,false\nAPP-009,690,0.3,personal,employed,3,90000,pending,true,false,true\nAPP-010,700,0.3,personal,employed,3,105000,pending,true,false,false\nAPP-011,700,0.45,mortgage,employed,3,105000,pending,true,false,false\nAPP-012,660,0.29,personal,employed,3,70000,pending,true,false,true\nAPP-013,700,0.3,personal,self_employed,2,105000,pending,true,false,false\nAPP-014,700,0.28,personal,employed,3,115000,pending,true,false,false\nAPP-015,700,0.3,personal,employed,3,105000,pending,true,false,false",
+    "gold_violations": [
+      {
+        "row_id": "APP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "APP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "APP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 31
+  },
+  {
+    "category": "loan_approval",
+    "rules": [
+      "Rule-A: Applications with credit_score < 640 must have status=declined.",
+      "Rule-B: Applications where loan_type=mortgage AND debt_to_income > 0.45 must have review_required=true.",
+      "Rule-C: Self-employed applicants (employment_type=self_employed) with tax_returns_filed < 3 must have docs_incomplete=true.",
+      "Rule-D: A 'qualified applicant' is defined as: credit_score >= 680 AND debt_to_income <= 0.38 AND income > 90000. Qualified applicants must NOT be sent to manual review (manual_review must be false). Flag qualified applicants where manual_review=true."
+    ],
+    "data_csv": "app_id,credit_score,debt_to_income,loan_type,employment_type,tax_returns_filed,income,status,review_required,docs_incomplete,manual_review\nAPP-001,600,0.35,personal,employed,4,120000,pending,true,false,false\nAPP-002,700,0.35,personal,employed,4,120000,pending,true,false,false\nAPP-003,700,0.5,mortgage,employed,4,120000,pending,false,false,false\nAPP-004,700,0.35,personal,employed,4,120000,pending,true,false,false\nAPP-005,700,0.35,personal,self_employed,2,120000,pending,true,false,false\nAPP-006,700,0.35,personal,employed,4,120000,pending,true,false,false\nAPP-007,710,0.33,personal,employed,4,115000,pending,true,false,true\nAPP-008,700,0.35,personal,employed,4,120000,pending,true,false,false\nAPP-009,730,0.35,personal,employed,4,105000,pending,true,false,true\nAPP-010,700,0.35,personal,employed,4,120000,pending,true,false,false\nAPP-011,700,0.5,mortgage,employed,4,120000,pending,true,false,false\nAPP-012,700,0.34,personal,employed,4,85000,pending,true,false,true\nAPP-013,700,0.35,personal,self_employed,3,120000,pending,true,false,false\nAPP-014,740,0.33,personal,employed,4,130000,pending,true,false,false\nAPP-015,700,0.35,personal,employed,4,120000,pending,true,false,false",
+    "gold_violations": [
+      {
+        "row_id": "APP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "APP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "APP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 32
+  },
+  {
+    "category": "loan_approval",
+    "rules": [
+      "Rule-A: Applications with credit_score < 620 must have status=declined.",
+      "Rule-B: Applications where loan_type=mortgage AND debt_to_income > 0.43 must have review_required=true.",
+      "Rule-C: Self-employed applicants (employment_type=self_employed) with tax_returns_filed < 2 must have docs_incomplete=true.",
+      "Rule-D: A 'qualified applicant' is defined as: credit_score >= 660 AND debt_to_income <= 0.36 AND income > 80000. Qualified applicants must NOT be sent to manual review (manual_review must be false). Flag qualified applicants where manual_review=true."
+    ],
+    "data_csv": "app_id,credit_score,debt_to_income,loan_type,employment_type,tax_returns_filed,income,status,review_required,docs_incomplete,manual_review\nAPP-001,580,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-002,700,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-003,700,0.48,mortgage,employed,3,110000,pending,false,false,false\nAPP-004,700,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-005,700,0.33,personal,self_employed,1,110000,pending,true,false,false\nAPP-006,700,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-007,690,0.31,personal,employed,3,105000,pending,true,false,true\nAPP-008,700,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-009,710,0.33,personal,employed,3,95000,pending,true,false,true\nAPP-010,700,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-011,700,0.48,mortgage,employed,3,110000,pending,true,false,false\nAPP-012,680,0.32,personal,employed,3,75000,pending,true,false,true\nAPP-013,700,0.33,personal,self_employed,2,110000,pending,true,false,false\nAPP-014,720,0.31,personal,employed,3,120000,pending,true,false,false\nAPP-015,700,0.33,personal,employed,3,110000,pending,true,false,false",
+    "gold_violations": [
+      {
+        "row_id": "APP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "APP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "APP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 33
+  },
+  {
+    "category": "loan_approval",
+    "rules": [
+      "Rule-A: Applications with credit_score < 580 must have status=declined.",
+      "Rule-B: Applications where loan_type=mortgage AND debt_to_income > 0.38 must have review_required=true.",
+      "Rule-C: Self-employed applicants (employment_type=self_employed) with tax_returns_filed < 2 must have docs_incomplete=true.",
+      "Rule-D: A 'qualified applicant' is defined as: credit_score >= 620 AND debt_to_income <= 0.31 AND income > 70000. Qualified applicants must NOT be sent to manual review (manual_review must be false). Flag qualified applicants where manual_review=true."
+    ],
+    "data_csv": "app_id,credit_score,debt_to_income,loan_type,employment_type,tax_returns_filed,income,status,review_required,docs_incomplete,manual_review\nAPP-001,540,0.28,personal,employed,3,100000,pending,true,false,false\nAPP-002,700,0.28,personal,employed,3,100000,pending,true,false,false\nAPP-003,700,0.43,mortgage,employed,3,100000,pending,false,false,false\nAPP-004,700,0.28,personal,employed,3,100000,pending,true,false,false\nAPP-005,700,0.28,personal,self_employed,1,100000,pending,true,false,false\nAPP-006,700,0.28,personal,employed,3,100000,pending,true,false,false\nAPP-007,650,0.26,personal,employed,3,95000,pending,true,false,true\nAPP-008,700,0.28,personal,employed,3,100000,pending,true,false,false\nAPP-009,670,0.28,personal,employed,3,85000,pending,true,false,true\nAPP-010,700,0.28,personal,employed,3,100000,pending,true,false,false\nAPP-011,700,0.43,mortgage,employed,3,100000,pending,true,false,false\nAPP-012,640,0.27,personal,employed,3,65000,pending,true,false,true\nAPP-013,700,0.28,personal,self_employed,2,100000,pending,true,false,false\nAPP-014,680,0.26,personal,employed,3,110000,pending,true,false,false\nAPP-015,700,0.28,personal,employed,3,100000,pending,true,false,false",
+    "gold_violations": [
+      {
+        "row_id": "APP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "APP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "APP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 34
+  },
+  {
+    "category": "loan_approval",
+    "rules": [
+      "Rule-A: Applications with credit_score < 650 must have status=declined.",
+      "Rule-B: Applications where loan_type=mortgage AND debt_to_income > 0.43 must have review_required=true.",
+      "Rule-C: Self-employed applicants (employment_type=self_employed) with tax_returns_filed < 2 must have docs_incomplete=true.",
+      "Rule-D: A 'qualified applicant' is defined as: credit_score >= 690 AND debt_to_income <= 0.36 AND income > 85000. Qualified applicants must NOT be sent to manual review (manual_review must be false). Flag qualified applicants where manual_review=true."
+    ],
+    "data_csv": "app_id,credit_score,debt_to_income,loan_type,employment_type,tax_returns_filed,income,status,review_required,docs_incomplete,manual_review\nAPP-001,610,0.33,personal,employed,3,115000,pending,true,false,false\nAPP-002,700,0.33,personal,employed,3,115000,pending,true,false,false\nAPP-003,700,0.48,mortgage,employed,3,115000,pending,false,false,false\nAPP-004,700,0.33,personal,employed,3,115000,pending,true,false,false\nAPP-005,700,0.33,personal,self_employed,1,115000,pending,true,false,false\nAPP-006,700,0.33,personal,employed,3,115000,pending,true,false,false\nAPP-007,720,0.31,personal,employed,3,110000,pending,true,false,true\nAPP-008,700,0.33,personal,employed,3,115000,pending,true,false,false\nAPP-009,740,0.33,personal,employed,3,100000,pending,true,false,true\nAPP-010,700,0.33,personal,employed,3,115000,pending,true,false,false\nAPP-011,700,0.48,mortgage,employed,3,115000,pending,true,false,false\nAPP-012,710,0.32,personal,employed,3,80000,pending,true,false,true\nAPP-013,700,0.33,personal,self_employed,2,115000,pending,true,false,false\nAPP-014,750,0.31,personal,employed,3,125000,pending,true,false,false\nAPP-015,700,0.33,personal,employed,3,115000,pending,true,false,false",
+    "gold_violations": [
+      {
+        "row_id": "APP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "APP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "APP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 35
+  },
+  {
+    "category": "loan_approval",
+    "rules": [
+      "Rule-A: Applications with credit_score < 620 must have status=declined.",
+      "Rule-B: Applications where loan_type=mortgage AND debt_to_income > 0.43 must have review_required=true.",
+      "Rule-C: Self-employed applicants (employment_type=self_employed) with tax_returns_filed < 3 must have docs_incomplete=true.",
+      "Rule-D: A 'qualified applicant' is defined as: credit_score >= 660 AND debt_to_income <= 0.36 AND income > 80000. Qualified applicants must NOT be sent to manual review (manual_review must be false). Flag qualified applicants where manual_review=true."
+    ],
+    "data_csv": "app_id,credit_score,debt_to_income,loan_type,employment_type,tax_returns_filed,income,status,review_required,docs_incomplete,manual_review\nAPP-001,580,0.33,personal,employed,4,110000,pending,true,false,false\nAPP-002,700,0.33,personal,employed,4,110000,pending,true,false,false\nAPP-003,700,0.48,mortgage,employed,4,110000,pending,false,false,false\nAPP-004,700,0.33,personal,employed,4,110000,pending,true,false,false\nAPP-005,700,0.33,personal,self_employed,2,110000,pending,true,false,false\nAPP-006,700,0.33,personal,employed,4,110000,pending,true,false,false\nAPP-007,690,0.31,personal,employed,4,105000,pending,true,false,true\nAPP-008,700,0.33,personal,employed,4,110000,pending,true,false,false\nAPP-009,710,0.33,personal,employed,4,95000,pending,true,false,true\nAPP-010,700,0.33,personal,employed,4,110000,pending,true,false,false\nAPP-011,700,0.48,mortgage,employed,4,110000,pending,true,false,false\nAPP-012,680,0.32,personal,employed,4,75000,pending,true,false,true\nAPP-013,700,0.33,personal,self_employed,3,110000,pending,true,false,false\nAPP-014,720,0.31,personal,employed,4,120000,pending,true,false,false\nAPP-015,700,0.33,personal,employed,4,110000,pending,true,false,false",
+    "gold_violations": [
+      {
+        "row_id": "APP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "APP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "APP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 36
+  },
+  {
+    "category": "loan_approval",
+    "rules": [
+      "Rule-A: Applications with credit_score < 600 must have status=declined.",
+      "Rule-B: Applications where loan_type=mortgage AND debt_to_income > 0.4 must have review_required=true.",
+      "Rule-C: Self-employed applicants (employment_type=self_employed) with tax_returns_filed < 2 must have docs_incomplete=true.",
+      "Rule-D: A 'qualified applicant' is defined as: credit_score >= 640 AND debt_to_income <= 0.33 AND income > 75000. Qualified applicants must NOT be sent to manual review (manual_review must be false). Flag qualified applicants where manual_review=true."
+    ],
+    "data_csv": "app_id,credit_score,debt_to_income,loan_type,employment_type,tax_returns_filed,income,status,review_required,docs_incomplete,manual_review\nAPP-001,560,0.3,personal,employed,3,105000,pending,true,false,false\nAPP-002,700,0.3,personal,employed,3,105000,pending,true,false,false\nAPP-003,700,0.45,mortgage,employed,3,105000,pending,false,false,false\nAPP-004,700,0.3,personal,employed,3,105000,pending,true,false,false\nAPP-005,700,0.3,personal,self_employed,1,105000,pending,true,false,false\nAPP-006,700,0.3,personal,employed,3,105000,pending,true,false,false\nAPP-007,670,0.28,personal,employed,3,100000,pending,true,false,true\nAPP-008,700,0.3,personal,employed,3,105000,pending,true,false,false\nAPP-009,690,0.3,personal,employed,3,90000,pending,true,false,true\nAPP-010,700,0.3,personal,employed,3,105000,pending,true,false,false\nAPP-011,700,0.45,mortgage,employed,3,105000,pending,true,false,false\nAPP-012,660,0.29,personal,employed,3,70000,pending,true,false,true\nAPP-013,700,0.3,personal,self_employed,2,105000,pending,true,false,false\nAPP-014,700,0.28,personal,employed,3,115000,pending,true,false,false\nAPP-015,700,0.3,personal,employed,3,105000,pending,true,false,false",
+    "gold_violations": [
+      {
+        "row_id": "APP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "APP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "APP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 37
+  },
+  {
+    "category": "loan_approval",
+    "rules": [
+      "Rule-A: Applications with credit_score < 640 must have status=declined.",
+      "Rule-B: Applications where loan_type=mortgage AND debt_to_income > 0.45 must have review_required=true.",
+      "Rule-C: Self-employed applicants (employment_type=self_employed) with tax_returns_filed < 2 must have docs_incomplete=true.",
+      "Rule-D: A 'qualified applicant' is defined as: credit_score >= 680 AND debt_to_income <= 0.38 AND income > 90000. Qualified applicants must NOT be sent to manual review (manual_review must be false). Flag qualified applicants where manual_review=true."
+    ],
+    "data_csv": "app_id,credit_score,debt_to_income,loan_type,employment_type,tax_returns_filed,income,status,review_required,docs_incomplete,manual_review\nAPP-001,600,0.35,personal,employed,3,120000,pending,true,false,false\nAPP-002,700,0.35,personal,employed,3,120000,pending,true,false,false\nAPP-003,700,0.5,mortgage,employed,3,120000,pending,false,false,false\nAPP-004,700,0.35,personal,employed,3,120000,pending,true,false,false\nAPP-005,700,0.35,personal,self_employed,1,120000,pending,true,false,false\nAPP-006,700,0.35,personal,employed,3,120000,pending,true,false,false\nAPP-007,710,0.33,personal,employed,3,115000,pending,true,false,true\nAPP-008,700,0.35,personal,employed,3,120000,pending,true,false,false\nAPP-009,730,0.35,personal,employed,3,105000,pending,true,false,true\nAPP-010,700,0.35,personal,employed,3,120000,pending,true,false,false\nAPP-011,700,0.5,mortgage,employed,3,120000,pending,true,false,false\nAPP-012,700,0.34,personal,employed,3,85000,pending,true,false,true\nAPP-013,700,0.35,personal,self_employed,2,120000,pending,true,false,false\nAPP-014,740,0.33,personal,employed,3,130000,pending,true,false,false\nAPP-015,700,0.35,personal,employed,3,120000,pending,true,false,false",
+    "gold_violations": [
+      {
+        "row_id": "APP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "APP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "APP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 38
+  },
+  {
+    "category": "loan_approval",
+    "rules": [
+      "Rule-A: Applications with credit_score < 620 must have status=declined.",
+      "Rule-B: Applications where loan_type=mortgage AND debt_to_income > 0.43 must have review_required=true.",
+      "Rule-C: Self-employed applicants (employment_type=self_employed) with tax_returns_filed < 2 must have docs_incomplete=true.",
+      "Rule-D: A 'qualified applicant' is defined as: credit_score >= 660 AND debt_to_income <= 0.36 AND income > 80000. Qualified applicants must NOT be sent to manual review (manual_review must be false). Flag qualified applicants where manual_review=true."
+    ],
+    "data_csv": "app_id,credit_score,debt_to_income,loan_type,employment_type,tax_returns_filed,income,status,review_required,docs_incomplete,manual_review\nAPP-001,580,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-002,700,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-003,700,0.48,mortgage,employed,3,110000,pending,false,false,false\nAPP-004,700,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-005,700,0.33,personal,self_employed,1,110000,pending,true,false,false\nAPP-006,700,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-007,690,0.31,personal,employed,3,105000,pending,true,false,true\nAPP-008,700,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-009,710,0.33,personal,employed,3,95000,pending,true,false,true\nAPP-010,700,0.33,personal,employed,3,110000,pending,true,false,false\nAPP-011,700,0.48,mortgage,employed,3,110000,pending,true,false,false\nAPP-012,680,0.32,personal,employed,3,75000,pending,true,false,true\nAPP-013,700,0.33,personal,self_employed,2,110000,pending,true,false,false\nAPP-014,720,0.31,personal,employed,3,120000,pending,true,false,false\nAPP-015,700,0.33,personal,employed,3,110000,pending,true,false,false",
+    "gold_violations": [
+      {
+        "row_id": "APP-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "APP-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "APP-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "APP-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 39
+  },
+  {
+    "category": "access_control",
+    "rules": [
+      "Rule-A: Users with role=viewer must have edit_permission=false.",
+      "Rule-B: Users with access_level >= 3 who are not in the security group (in_security_group=false) must have access_flag=true.",
+      "Rule-C: Admin users (role=admin) must have mfa_enabled=true AND days_since_login <= 90. Non-compliant admins must have compliance_ok=false.",
+      "Rule-D: A 'privileged user' is defined as: role=admin OR role=superuser OR access_level >= 4. Privileged users with days_since_security_review > 180 must have review_overdue=true."
+    ],
+    "data_csv": "user_id,role,access_level,edit_permission,in_security_group,access_flag,mfa_enabled,days_since_login,compliance_ok,days_since_security_review,review_overdue\nUSR-001,viewer,1,true,true,false,true,30,true,150,false\nUSR-002,editor,2,false,true,false,true,30,true,150,false\nUSR-003,editor,4,false,false,false,true,30,true,150,false\nUSR-004,editor,2,false,true,false,true,30,true,150,false\nUSR-005,admin,2,false,true,false,false,30,true,150,false\nUSR-006,editor,2,false,true,false,true,30,true,150,false\nUSR-007,editor,4,false,true,false,true,30,true,220,false\nUSR-008,editor,2,false,true,false,true,30,true,150,false\nUSR-009,superuser,2,false,true,false,true,30,true,250,false\nUSR-010,editor,2,false,true,false,true,30,true,150,false\nUSR-011,editor,4,false,true,false,true,30,true,150,false\nUSR-012,admin,2,false,true,false,true,80,true,150,false\nUSR-013,admin,2,false,true,false,true,30,false,170,false\nUSR-014,editor,3,false,true,false,true,30,true,230,false\nUSR-015,editor,2,false,true,false,true,30,true,150,false",
+    "gold_violations": [
+      {
+        "row_id": "USR-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "USR-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "USR-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 40
+  },
+  {
+    "category": "access_control",
+    "rules": [
+      "Rule-A: Users with role=viewer must have edit_permission=false.",
+      "Rule-B: Users with access_level >= 2 who are not in the security group (in_security_group=false) must have access_flag=true.",
+      "Rule-C: Admin users (role=admin) must have mfa_enabled=true AND days_since_login <= 60. Non-compliant admins must have compliance_ok=false.",
+      "Rule-D: A 'privileged user' is defined as: role=admin OR role=superuser OR access_level >= 3. Privileged users with days_since_security_review > 120 must have review_overdue=true."
+    ],
+    "data_csv": "user_id,role,access_level,edit_permission,in_security_group,access_flag,mfa_enabled,days_since_login,compliance_ok,days_since_security_review,review_overdue\nUSR-001,viewer,1,true,true,false,true,30,true,90,false\nUSR-002,editor,1,false,true,false,true,30,true,90,false\nUSR-003,editor,3,false,false,false,true,30,true,90,false\nUSR-004,editor,1,false,true,false,true,30,true,90,false\nUSR-005,admin,1,false,true,false,false,30,true,90,false\nUSR-006,editor,1,false,true,false,true,30,true,90,false\nUSR-007,editor,3,false,true,false,true,30,true,160,false\nUSR-008,editor,1,false,true,false,true,30,true,90,false\nUSR-009,superuser,2,false,true,false,true,30,true,190,false\nUSR-010,editor,1,false,true,false,true,30,true,90,false\nUSR-011,editor,3,false,true,false,true,30,true,90,false\nUSR-012,admin,1,false,true,false,true,50,true,90,false\nUSR-013,admin,1,false,true,false,true,30,false,110,false\nUSR-014,editor,2,false,true,false,true,30,true,170,false\nUSR-015,editor,1,false,true,false,true,30,true,90,false",
+    "gold_violations": [
+      {
+        "row_id": "USR-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "USR-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "USR-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 41
+  },
+  {
+    "category": "access_control",
+    "rules": [
+      "Rule-A: Users with role=viewer must have edit_permission=false.",
+      "Rule-B: Users with access_level >= 4 who are not in the security group (in_security_group=false) must have access_flag=true.",
+      "Rule-C: Admin users (role=admin) must have mfa_enabled=true AND days_since_login <= 120. Non-compliant admins must have compliance_ok=false.",
+      "Rule-D: A 'privileged user' is defined as: role=admin OR role=superuser OR access_level >= 5. Privileged users with days_since_security_review > 180 must have review_overdue=true."
+    ],
+    "data_csv": "user_id,role,access_level,edit_permission,in_security_group,access_flag,mfa_enabled,days_since_login,compliance_ok,days_since_security_review,review_overdue\nUSR-001,viewer,1,true,true,false,true,30,true,150,false\nUSR-002,editor,3,false,true,false,true,30,true,150,false\nUSR-003,editor,5,false,false,false,true,30,true,150,false\nUSR-004,editor,3,false,true,false,true,30,true,150,false\nUSR-005,admin,3,false,true,false,false,30,true,150,false\nUSR-006,editor,3,false,true,false,true,30,true,150,false\nUSR-007,editor,5,false,true,false,true,30,true,220,false\nUSR-008,editor,3,false,true,false,true,30,true,150,false\nUSR-009,superuser,2,false,true,false,true,30,true,250,false\nUSR-010,editor,3,false,true,false,true,30,true,150,false\nUSR-011,editor,5,false,true,false,true,30,true,150,false\nUSR-012,admin,3,false,true,false,true,110,true,150,false\nUSR-013,admin,3,false,true,false,true,30,false,170,false\nUSR-014,editor,4,false,true,false,true,30,true,230,false\nUSR-015,editor,3,false,true,false,true,30,true,150,false",
+    "gold_violations": [
+      {
+        "row_id": "USR-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "USR-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "USR-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 42
+  },
+  {
+    "category": "access_control",
+    "rules": [
+      "Rule-A: Users with role=viewer must have edit_permission=false.",
+      "Rule-B: Users with access_level >= 3 who are not in the security group (in_security_group=false) must have access_flag=true.",
+      "Rule-C: Admin users (role=admin) must have mfa_enabled=true AND days_since_login <= 90. Non-compliant admins must have compliance_ok=false.",
+      "Rule-D: A 'privileged user' is defined as: role=admin OR role=superuser OR access_level >= 4. Privileged users with days_since_security_review > 180 must have review_overdue=true."
+    ],
+    "data_csv": "user_id,role,access_level,edit_permission,in_security_group,access_flag,mfa_enabled,days_since_login,compliance_ok,days_since_security_review,review_overdue\nUSR-001,viewer,1,true,true,false,true,30,true,150,false\nUSR-002,editor,2,false,true,false,true,30,true,150,false\nUSR-003,editor,4,false,false,false,true,30,true,150,false\nUSR-004,editor,2,false,true,false,true,30,true,150,false\nUSR-005,admin,2,false,true,false,false,30,true,150,false\nUSR-006,editor,2,false,true,false,true,30,true,150,false\nUSR-007,editor,4,false,true,false,true,30,true,220,false\nUSR-008,editor,2,false,true,false,true,30,true,150,false\nUSR-009,superuser,2,false,true,false,true,30,true,250,false\nUSR-010,editor,2,false,true,false,true,30,true,150,false\nUSR-011,editor,4,false,true,false,true,30,true,150,false\nUSR-012,admin,2,false,true,false,true,80,true,150,false\nUSR-013,admin,2,false,true,false,true,30,false,170,false\nUSR-014,editor,3,false,true,false,true,30,true,230,false\nUSR-015,editor,2,false,true,false,true,30,true,150,false",
+    "gold_violations": [
+      {
+        "row_id": "USR-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "USR-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "USR-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 43
+  },
+  {
+    "category": "access_control",
+    "rules": [
+      "Rule-A: Users with role=viewer must have edit_permission=false.",
+      "Rule-B: Users with access_level >= 3 who are not in the security group (in_security_group=false) must have access_flag=true.",
+      "Rule-C: Admin users (role=admin) must have mfa_enabled=true AND days_since_login <= 60. Non-compliant admins must have compliance_ok=false.",
+      "Rule-D: A 'privileged user' is defined as: role=admin OR role=superuser OR access_level >= 4. Privileged users with days_since_security_review > 120 must have review_overdue=true."
+    ],
+    "data_csv": "user_id,role,access_level,edit_permission,in_security_group,access_flag,mfa_enabled,days_since_login,compliance_ok,days_since_security_review,review_overdue\nUSR-001,viewer,1,true,true,false,true,30,true,90,false\nUSR-002,editor,2,false,true,false,true,30,true,90,false\nUSR-003,editor,4,false,false,false,true,30,true,90,false\nUSR-004,editor,2,false,true,false,true,30,true,90,false\nUSR-005,admin,2,false,true,false,false,30,true,90,false\nUSR-006,editor,2,false,true,false,true,30,true,90,false\nUSR-007,editor,4,false,true,false,true,30,true,160,false\nUSR-008,editor,2,false,true,false,true,30,true,90,false\nUSR-009,superuser,2,false,true,false,true,30,true,190,false\nUSR-010,editor,2,false,true,false,true,30,true,90,false\nUSR-011,editor,4,false,true,false,true,30,true,90,false\nUSR-012,admin,2,false,true,false,true,50,true,90,false\nUSR-013,admin,2,false,true,false,true,30,false,110,false\nUSR-014,editor,3,false,true,false,true,30,true,170,false\nUSR-015,editor,2,false,true,false,true,30,true,90,false",
+    "gold_violations": [
+      {
+        "row_id": "USR-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "USR-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "USR-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 44
+  },
+  {
+    "category": "access_control",
+    "rules": [
+      "Rule-A: Users with role=viewer must have edit_permission=false.",
+      "Rule-B: Users with access_level >= 3 who are not in the security group (in_security_group=false) must have access_flag=true.",
+      "Rule-C: Admin users (role=admin) must have mfa_enabled=true AND days_since_login <= 90. Non-compliant admins must have compliance_ok=false.",
+      "Rule-D: A 'privileged user' is defined as: role=admin OR role=superuser OR access_level >= 4. Privileged users with days_since_security_review > 180 must have review_overdue=true."
+    ],
+    "data_csv": "user_id,role,access_level,edit_permission,in_security_group,access_flag,mfa_enabled,days_since_login,compliance_ok,days_since_security_review,review_overdue\nUSR-001,viewer,1,true,true,false,true,30,true,150,false\nUSR-002,editor,2,false,true,false,true,30,true,150,false\nUSR-003,editor,4,false,false,false,true,30,true,150,false\nUSR-004,editor,2,false,true,false,true,30,true,150,false\nUSR-005,admin,2,false,true,false,false,30,true,150,false\nUSR-006,editor,2,false,true,false,true,30,true,150,false\nUSR-007,editor,4,false,true,false,true,30,true,220,false\nUSR-008,editor,2,false,true,false,true,30,true,150,false\nUSR-009,superuser,2,false,true,false,true,30,true,250,false\nUSR-010,editor,2,false,true,false,true,30,true,150,false\nUSR-011,editor,4,false,true,false,true,30,true,150,false\nUSR-012,admin,2,false,true,false,true,80,true,150,false\nUSR-013,admin,2,false,true,false,true,30,false,170,false\nUSR-014,editor,3,false,true,false,true,30,true,230,false\nUSR-015,editor,2,false,true,false,true,30,true,150,false",
+    "gold_violations": [
+      {
+        "row_id": "USR-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "USR-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "USR-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 45
+  },
+  {
+    "category": "access_control",
+    "rules": [
+      "Rule-A: Users with role=viewer must have edit_permission=false.",
+      "Rule-B: Users with access_level >= 4 who are not in the security group (in_security_group=false) must have access_flag=true.",
+      "Rule-C: Admin users (role=admin) must have mfa_enabled=true AND days_since_login <= 120. Non-compliant admins must have compliance_ok=false.",
+      "Rule-D: A 'privileged user' is defined as: role=admin OR role=superuser OR access_level >= 5. Privileged users with days_since_security_review > 180 must have review_overdue=true."
+    ],
+    "data_csv": "user_id,role,access_level,edit_permission,in_security_group,access_flag,mfa_enabled,days_since_login,compliance_ok,days_since_security_review,review_overdue\nUSR-001,viewer,1,true,true,false,true,30,true,150,false\nUSR-002,editor,3,false,true,false,true,30,true,150,false\nUSR-003,editor,5,false,false,false,true,30,true,150,false\nUSR-004,editor,3,false,true,false,true,30,true,150,false\nUSR-005,admin,3,false,true,false,false,30,true,150,false\nUSR-006,editor,3,false,true,false,true,30,true,150,false\nUSR-007,editor,5,false,true,false,true,30,true,220,false\nUSR-008,editor,3,false,true,false,true,30,true,150,false\nUSR-009,superuser,2,false,true,false,true,30,true,250,false\nUSR-010,editor,3,false,true,false,true,30,true,150,false\nUSR-011,editor,5,false,true,false,true,30,true,150,false\nUSR-012,admin,3,false,true,false,true,110,true,150,false\nUSR-013,admin,3,false,true,false,true,30,false,170,false\nUSR-014,editor,4,false,true,false,true,30,true,230,false\nUSR-015,editor,3,false,true,false,true,30,true,150,false",
+    "gold_violations": [
+      {
+        "row_id": "USR-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "USR-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "USR-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 46
+  },
+  {
+    "category": "access_control",
+    "rules": [
+      "Rule-A: Users with role=viewer must have edit_permission=false.",
+      "Rule-B: Users with access_level >= 2 who are not in the security group (in_security_group=false) must have access_flag=true.",
+      "Rule-C: Admin users (role=admin) must have mfa_enabled=true AND days_since_login <= 60. Non-compliant admins must have compliance_ok=false.",
+      "Rule-D: A 'privileged user' is defined as: role=admin OR role=superuser OR access_level >= 3. Privileged users with days_since_security_review > 120 must have review_overdue=true."
+    ],
+    "data_csv": "user_id,role,access_level,edit_permission,in_security_group,access_flag,mfa_enabled,days_since_login,compliance_ok,days_since_security_review,review_overdue\nUSR-001,viewer,1,true,true,false,true,30,true,90,false\nUSR-002,editor,1,false,true,false,true,30,true,90,false\nUSR-003,editor,3,false,false,false,true,30,true,90,false\nUSR-004,editor,1,false,true,false,true,30,true,90,false\nUSR-005,admin,1,false,true,false,false,30,true,90,false\nUSR-006,editor,1,false,true,false,true,30,true,90,false\nUSR-007,editor,3,false,true,false,true,30,true,160,false\nUSR-008,editor,1,false,true,false,true,30,true,90,false\nUSR-009,superuser,2,false,true,false,true,30,true,190,false\nUSR-010,editor,1,false,true,false,true,30,true,90,false\nUSR-011,editor,3,false,true,false,true,30,true,90,false\nUSR-012,admin,1,false,true,false,true,50,true,90,false\nUSR-013,admin,1,false,true,false,true,30,false,110,false\nUSR-014,editor,2,false,true,false,true,30,true,170,false\nUSR-015,editor,1,false,true,false,true,30,true,90,false",
+    "gold_violations": [
+      {
+        "row_id": "USR-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "USR-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "USR-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 47
+  },
+  {
+    "category": "access_control",
+    "rules": [
+      "Rule-A: Users with role=viewer must have edit_permission=false.",
+      "Rule-B: Users with access_level >= 3 who are not in the security group (in_security_group=false) must have access_flag=true.",
+      "Rule-C: Admin users (role=admin) must have mfa_enabled=true AND days_since_login <= 90. Non-compliant admins must have compliance_ok=false.",
+      "Rule-D: A 'privileged user' is defined as: role=admin OR role=superuser OR access_level >= 4. Privileged users with days_since_security_review > 180 must have review_overdue=true."
+    ],
+    "data_csv": "user_id,role,access_level,edit_permission,in_security_group,access_flag,mfa_enabled,days_since_login,compliance_ok,days_since_security_review,review_overdue\nUSR-001,viewer,1,true,true,false,true,30,true,150,false\nUSR-002,editor,2,false,true,false,true,30,true,150,false\nUSR-003,editor,4,false,false,false,true,30,true,150,false\nUSR-004,editor,2,false,true,false,true,30,true,150,false\nUSR-005,admin,2,false,true,false,false,30,true,150,false\nUSR-006,editor,2,false,true,false,true,30,true,150,false\nUSR-007,editor,4,false,true,false,true,30,true,220,false\nUSR-008,editor,2,false,true,false,true,30,true,150,false\nUSR-009,superuser,2,false,true,false,true,30,true,250,false\nUSR-010,editor,2,false,true,false,true,30,true,150,false\nUSR-011,editor,4,false,true,false,true,30,true,150,false\nUSR-012,admin,2,false,true,false,true,80,true,150,false\nUSR-013,admin,2,false,true,false,true,30,false,170,false\nUSR-014,editor,3,false,true,false,true,30,true,230,false\nUSR-015,editor,2,false,true,false,true,30,true,150,false",
+    "gold_violations": [
+      {
+        "row_id": "USR-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "USR-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "USR-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 48
+  },
+  {
+    "category": "access_control",
+    "rules": [
+      "Rule-A: Users with role=viewer must have edit_permission=false.",
+      "Rule-B: Users with access_level >= 3 who are not in the security group (in_security_group=false) must have access_flag=true.",
+      "Rule-C: Admin users (role=admin) must have mfa_enabled=true AND days_since_login <= 90. Non-compliant admins must have compliance_ok=false.",
+      "Rule-D: A 'privileged user' is defined as: role=admin OR role=superuser OR access_level >= 4. Privileged users with days_since_security_review > 180 must have review_overdue=true."
+    ],
+    "data_csv": "user_id,role,access_level,edit_permission,in_security_group,access_flag,mfa_enabled,days_since_login,compliance_ok,days_since_security_review,review_overdue\nUSR-001,viewer,1,true,true,false,true,30,true,150,false\nUSR-002,editor,2,false,true,false,true,30,true,150,false\nUSR-003,editor,4,false,false,false,true,30,true,150,false\nUSR-004,editor,2,false,true,false,true,30,true,150,false\nUSR-005,admin,2,false,true,false,false,30,true,150,false\nUSR-006,editor,2,false,true,false,true,30,true,150,false\nUSR-007,editor,4,false,true,false,true,30,true,220,false\nUSR-008,editor,2,false,true,false,true,30,true,150,false\nUSR-009,superuser,2,false,true,false,true,30,true,250,false\nUSR-010,editor,2,false,true,false,true,30,true,150,false\nUSR-011,editor,4,false,true,false,true,30,true,150,false\nUSR-012,admin,2,false,true,false,true,80,true,150,false\nUSR-013,admin,2,false,true,false,true,30,false,170,false\nUSR-014,editor,3,false,true,false,true,30,true,230,false\nUSR-015,editor,2,false,true,false,true,30,true,150,false",
+    "gold_violations": [
+      {
+        "row_id": "USR-001",
+        "rules_violated": [
+          "Rule-A"
+        ],
+        "difficulty": "easy"
+      },
+      {
+        "row_id": "USR-003",
+        "rules_violated": [
+          "Rule-B"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-005",
+        "rules_violated": [
+          "Rule-C"
+        ],
+        "difficulty": "medium"
+      },
+      {
+        "row_id": "USR-007",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      },
+      {
+        "row_id": "USR-009",
+        "rules_violated": [
+          "Rule-D"
+        ],
+        "difficulty": "hard"
+      }
+    ],
+    "id": 49
+  }
+]
